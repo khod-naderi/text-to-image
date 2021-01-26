@@ -1,6 +1,6 @@
 <?php
     include('./lib/xor.php');
-    include('./lib/captcha.php');
+    include('./lib/rand.php');
     $myfile = fopen("./content/log.x", "a");
     $data = $_SERVER['REMOTE_ADDR'];
     $data .= " => ";
