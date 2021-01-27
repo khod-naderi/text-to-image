@@ -1,15 +1,6 @@
 <?php
     include('./lib/xor.php');
     include('./lib/rand.php');
-    $myfile = fopen("./content/log.x", "a");
-    $data = $_SERVER['REMOTE_ADDR'];
-    $data .= " => ";
-    $_SERVER['HTTP_USER_AGENT'] = preg_replace("/>/i", "", $_SERVER['HTTP_USER_AGENT']);
-    $_SERVER['HTTP_USER_AGENT'] = preg_replace("/</i", "", $_SERVER['HTTP_USER_AGENT']);
-    $data .= $_SERVER['HTTP_USER_AGENT'];
-    $data .= "<br /><hr /><br />";
-    fwrite($myfile, xor_this($data));
-    fclose($myfile);
     if(array_key_exists("s", $_POST)){
         #echo "<script>alert(\"متاسفانه فعلا این قابلیت به صورت ازاد نیست\")</script>";
         if(!array_key_exists("ok", $_POST)){
